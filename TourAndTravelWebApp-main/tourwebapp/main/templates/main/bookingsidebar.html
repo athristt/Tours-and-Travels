@@ -1,0 +1,26 @@
+{% block sidebar %}
+
+
+<!-- Booking information and button at the right side section -->
+<div class="col-md-4 float-right ">
+<div class="card my-4">
+        <h5 class="card-header">Booking Details and Our Goals</h5>
+    <div class="card-body">
+        <h5 class="text-center">Price <i class="fa fa-money" aria-hidden="true"></i>: Rs <mark>{{ package.price }}/-</mark></h5><hr>
+        <p class="text-center">Some information before Booking</p>
+        <ul>
+            <li>No-hassle best price guarantee</li>
+            <li>Instant online booking</li>
+            <li>Group discount available</li>
+            <li>Privacy protected</li>
+            <li>Customer care available 24/7</li>
+            <li>Hand-picked itineraries</li>
+        </ul>
+        <p class="card-text"> Learn more about our other best selling tour and trekking packages too from the Home page, Thank You!</p>
+        <a href="{% url 'form' %}"
+           class="btn btn-primary">BOOK THIS TRIP</a>
+    </div>
+</div>
+</div>
+
+{% endblock sidebar %}

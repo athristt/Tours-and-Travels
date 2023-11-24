@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-7 card mb-5  mt-3 left  top">
+        <div class="card-body">
+            <h1>{% block title %} {{ package.title }} {% endblock title %}</h1><hr>
+          <img src="{{package.image.url}}" alt="{{package.title}}" width="100%" height="500" />
+          <br><br>
+          <h4 class="text-muted text-center">About {{package.title}} </h4><br><br>
+            <ul>
+              <li>Trip Difficulty: {{package.trip_diff}} &#10004;</li><br>
+              <li>Trip Style: {{package.trip_style}} &#10004;</li><br>
+              <li>Transport: {{package.transport}} &#10004;</li><br>
+              <li>Food : {{package.food}} Included &#10004;</li><br>
+              <li>Trip Accommodation: {{package.accommodation}} &#10004;</li><br>
+            </ul>
+            <br>
+            <h3>
+              Duration <i class="fa fa-clock-o" aria-hidden="true"></i>: <mark>{{ package.days }} days</mark></h3><br>
+          <p class="card-text ">{{ package.content}}</p>
+        </div>
+      </div>
+      {% block sidebar %} {% include 'main/bookingsidebar.html' %} {% endblock sidebar %}
+    </div>
+  </div>
+
+
+
+
+{% endblock %}

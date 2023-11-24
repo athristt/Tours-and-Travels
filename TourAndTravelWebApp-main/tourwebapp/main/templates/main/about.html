@@ -1,0 +1,126 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+<section class="main_heading my-5">
+  <div class="container">
+  <div class="text-left ">
+      <h1 class="display-6"> About us </h1>
+      <hr class="w-100 mx-auto" />
+  </div>
+</div>
+  <section id="main">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>Welcome to Surya Tours and Travels</h2>
+        <p>
+          It's the Travel Agency in Nepal, Founded by young professionals and 
+          entrepreneurs form Tourism and Management Field. Coming a long way we 
+          have gained and have knowledge and quite a experience with every tour 
+          sectors and fields related to tourism sector in Nepal. 
+     
+        </p>
+        <p>
+          We offer you the best tour pakages and tour facility that any Travel
+          enhusisats can ask for. WE offer Tours in almost every corners of Nepal 
+          and all the beautiful and exclusive destinations that our beautiful contry
+          has to offer. So, please feel free to contact us to book any tour pakages,
+          we will make sure that your dream of travelling beautiful destinations come
+          to reality in the best way possible.
+        </p>
+      </div>
+
+        <div class=" col-sm-4" style="background-color:lavender;">
+          <div class="text-center">
+          <aside id="sidebar">
+          <h3>Company Info</h3>
+          
+            <li><a class="link-primary" href="{% url 'guide' %}">Our team</a></li>
+            <li><a class="link-primary" href="{% url 'TermsandCondition' %}">Terms and Conditions</a></li>
+            <li><a class="link-primary" href="{% url 'FAQ' %}">FAQS</a></li>
+          
+          </aside>
+        </div>
+      </div>
+      </div>    
+    </div>
+  </div>
+
+  <section>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>About Our Services</h2>
+        <p>
+         <h5>Why choose us?</h5>
+         
+           Our travel agency have been serving and providing the best tour
+           and travel facilities that anyone has to offer for over a decade. Having 
+           come a long way till this date, we are constantly trying to provide 
+           best services to our customer. So, we have listed some of the main reasons
+           why you should choose us:
+           <ul>
+          <li>Small groups, travel and trekking to different destinations of Nepal.</li>
+          <li>Flexibility in trip, itinerary & dates
+          Professional & friendly guides.</li>
+          <li>Reasonably pricing for tour, climbing, trekking, and expedition.</li>
+          <li>Private or Group Tour Options.</li>
+          <li>24*7 Support.</li>
+          <li>Accomodate everything accordingly to your interest and needs</li>
+          <li>Registered to government authorities</li>
+          <li>Provide best and luxurious facilites</li>
+          <li>10 Years of Experience</li>
+         </ul>
+        </p>
+        <p>
+         <h5>What we have to offer?</h5>
+         For serving over a decade, we have atleat gained the knowledge
+         about what we should we offering to our clients to provide them the
+        best travel experience throughout thei time with us. So, following are 
+        some of the main offers that we provide to our customers:
+        <ul>
+          <li>Book air tickets to and from Kathmandu to any destinations preferred</li>
+          <li>Accomodate customers with their choices during travel</li>
+          <li>Discounts on hotel bookings all over Nepal</li>
+          <li>Tourist Bus and other transpotation serivces accordingly</li>
+          <li>Local Transfers</li>
+          <li>Provide personal guides</li>
+          <li>Private Cars, Vans and Jeep rental</li>
+          <li>Every important information regarding the tours</li>
+        </ul>
+        </p>
+        <p>
+          <h5>Our Main Goal</h5>
+          The service that we provide is completely centralized to our customer's 
+          needs and demands. So, our main goal is to meet or rather exceed the 
+          expectations and satisfy our customers to the fullest. We are trying to provide 
+          and will keep on working and trying our best to provide the best travel 
+          experience for our customers.
+        </p>
+      </div>
+
+      <div class=" col-sm-4">
+        <div class="text-center">
+        <aside id="sidebar1">
+        <h3 >Ask a Question </h3>
+        
+        <li>014456232</li>
+        <li>012347659</li>
+        <p>Direct Call on Viber or Whatsapp</p>
+        </aside>
+      </div>
+    </div> 
+    </section>
+      
+</section>
+</section>
+
+
+  {% endblock%}

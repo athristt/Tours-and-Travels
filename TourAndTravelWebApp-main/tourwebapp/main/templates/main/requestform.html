@@ -1,0 +1,82 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+
+<section class="main_heading my-2 py-1">
+    <div class="text-center">
+        <h1 class="display-5"> Request a Package </h1>
+        <hr class="w-25 mx-auto" />
+    </div>
+  </section>
+
+<div class="container  py-5">
+  
+    <form method="POST">
+      {% csrf_token %}
+      <div class="row">
+          <div class="form-group mb-4 col-md-6">
+            <label for="exampleInputEmail1">First Name</label>
+            <input name="fname" type="name" class="form-control" id="exampleInputEmail1"  placeholder="Enter First name" required>
+          </div>
+
+        <div class="form-group mb-4 col-md-6">
+          <label for="exampleInputEmail1">Last Name</label>
+          <input name="lname" type="name" class="form-control" id="exampleInputEmail1"  placeholder="Enter Last name" required>
+        </div>
+    
+     
+      
+      <div class="form-group mb-4 col-md-6">
+        <label for="exampleInputEmail1">Email Address</label>
+        <input name="email" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="abc@gmail.com" required>
+      </div>
+      
+      <div class="form-group mb-4 col-md-6">
+          <label for="exampleInputEmail1">Phone Number</label>
+          <input name="phone" type="phone" class="form-control"  placeholder="Enter your contact number" required>
+        </div>
+
+        <div class="form-group mb-4 col-md-6">
+          <label for="exampleInputEmail1">Emergency Contact Number</label>
+          <input name="ephone" type="phone" class="form-control"  placeholder="Enter your contact number" required>
+        </div>
+
+        <div></div>
+       
+
+        <div class="form-group mb-4 col-md-6">
+          <label for="exampleInputEmail1">Which Tour package:</label>
+         
+          <input name="package" type="text" list="packages" type="phone" class="form-control"  placeholder="Enter your desired package" required>
+          <datalist id="packages">
+            {% for package in packages %}
+            <option value="{{ package.title }}">
+            {% endfor %}
+          </datalist>
+        </div>
+       
+        <div></div>
+
+        <div class="form-group mb-4 col-md-6">
+          <label for="inputlg">Pickup Details</label>
+          <textarea name= "pickupdetails" class="form-control" id="textAreaExample3" rows="5"></textarea>
+        </div>
+        
+        
+        
+        </div>
+        
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+   
+</div>
+
+
+
+
+
+{% endblock%}

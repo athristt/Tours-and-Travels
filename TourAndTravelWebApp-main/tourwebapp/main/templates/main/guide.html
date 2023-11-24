@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %} {% block content %}
+
+<section class="main_heading my-5 container">
+    <div class="container">
+        <div class="text-left ">
+            <h1 class="display-6"> Our Team and Guides</h1>
+            <hr class="w-100 mx-auto" />
+        </div>
+    </div>
+
+    <div class="card mb-12 py-2">
+        <div class="row g-0">
+            {% for guide in guide %}
+            <!-- <div class="py-2"> -->
+            <div class="col-md-4" style="margin-bottom: 25px;">
+                <img src=" {{guide.image.url}} " alt="{{guide.title}} ">
+            </div>
+
+            <div class="col-md-8 ">
+                <div class="card-body ">
+                    <h5 class="card-title ">{{ guide.title1 }}</h5>
+                    <p class="card-text ">{{ guide.description }}</p>
+                    <p class="card-text "><small class="text-muted ">{{ guide.skills }}</small></p>
+                </div>
+            </div>
+            <!-- </div> -->
+            {% endfor %}
+            <br>
+            <br>
+        </div>
+    </div>
+</section>
+
+
+{% endblock%}
